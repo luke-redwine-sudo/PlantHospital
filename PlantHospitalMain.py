@@ -7,13 +7,13 @@ import requests
 def send_json_request(ws, request):
     ws.send(json.dumps(request))
 
-def send_json_message(message, channelid):
+def send_json_message(message, token, channelid):
     payload = {
         "content": message
     }
 
     headers = {
-        "authorization": 'MzMzMzA4NDYzOTI3MTMyMTcx.X-wv-w.jc9TJJv01ubtdXdn-rzauAkgMVA'
+        "authorization": token
     }
 
     r = requests.post(f"https://discord.com/api/v8/channels/{channelid}/messages", headers=headers, data=payload)
@@ -66,7 +66,7 @@ while True:
         print(response)
 
         if response.startswith("ICE"):
-            send_json_message("CREAM", "1135657445532909621")
+            send_json_message("CREAM", token, "1135657445532909621")
 
         op_code = event("op")
         if op_code == 11:
