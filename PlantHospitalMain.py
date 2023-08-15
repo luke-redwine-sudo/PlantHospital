@@ -79,7 +79,7 @@ event = planthospital.receive_json_response()
 #threading._start_new_thread(heartbeat, (heartbeat_interval, ws))
 #threading._start_new_thread(test_send_json_request, ())
 
-token = "MTEzNTc3MDAyMTU0NTY2MDUwNw.GG8OjP.ujOCpVaJjrj3X5UYBZScmopKdGsJBnVKv6sFgs"
+token = "MTEzNTc3MDAyMTU0NTY2MDUwNw.Gg25SA._zcJuK4i93sg3GBiSSCsmECMOjeXkNuVPAb9UI"
 payload = {
     "op": 2,
     "d": {
